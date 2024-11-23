@@ -1,0 +1,18 @@
+pluginManagement {
+    repositories {
+        google() // Google's Maven repository
+        mavenCentral() // Central Maven repository
+        gradlePluginPortal() // Gradle plugin portal
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS) // Enforce settings-defined repositories
+    repositories {
+        google() // Google's Maven repository
+        mavenCentral() // Central Maven repository
+    }
+}
+
+rootProject.name = "smart_lock"
+include ':app'

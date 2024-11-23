@@ -1,0 +1,40 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "com.google.gms.google-services" // Firebase Plugin
+}
+
+android {
+    namespace = "com.example.smart_lock"
+    compileSdk = 33 // Set to the latest SDK version you support
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    defaultConfig {
+        applicationId = "com.example.smart_lock"
+        minSdk = 21 // Set the minimum SDK version for your app
+        targetSdk = 33 // Set the target SDK version
+        versionCode = 1
+        versionName = "1.0"
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug // Temporary for release builds
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+// Apply Google Services plugin
+apply plugin: 'com.google.gms.google-services'
